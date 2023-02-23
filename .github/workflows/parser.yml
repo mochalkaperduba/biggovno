@@ -1,6 +1,7 @@
 name: Parser
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '1.npt'
