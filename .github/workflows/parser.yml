@@ -1,0 +1,6 @@
+name: Parser
+
+on:
+  push:
+    paths:
+      - '*.npt'
