@@ -15,5 +15,5 @@ ints = [int(line) for line in lines]
 # Create an array from the integers
 arr = np.array(ints)
 
-com = "q(\""+sys.argv[1]+"\",\""+sys.argv[2]+"\",\""+sys.argv[3]+"\",
+com = "q(\""+sys.argv[1]+"\",\""+sys.argv[2]+"\",\""+sys.argv[3]+"\","
 print(com)
