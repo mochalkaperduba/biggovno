@@ -10,8 +10,8 @@ with open('1.npt', 'r') as f:
 ints = [int(line) for line in lines]
 com = "q(\""+sys.argv[1]+"\",\""+sys.argv[2]+"\",\""+sys.argv[3]+"\",["
 for q in ints:
-    com+=q
+    com+=str(q)
     com+=','
-com+=1
+com+='1'
 com+="])"
 print(com)
