@@ -16,7 +16,7 @@ com+='1'
 com+="])"
 print(com)
 
-f = open("core/inject.js", "r")
+f = open("core/inject.js", "r", encoding='utf-8')
 js = f.read()
 f.close()
 
