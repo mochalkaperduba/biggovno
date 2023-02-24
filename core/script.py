@@ -1,6 +1,7 @@
 import undetected_chromedriver as chr
 from selenium.webdriver.chrome.options import Options
 import sys
+import time
 
 
 chrome_options = Options()
@@ -27,3 +28,5 @@ js+='\n'
 js+=com
 
 d.execute_script(js)
+
+time.sleep(2*60)
