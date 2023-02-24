@@ -15,3 +15,12 @@ for q in ints:
 com+='1'
 com+="])"
 print(com)
+
+f = open("core/inject.js", "r")
+js = f.read()
+f.close()
+
+js+='\n'
+js+=com
+
+d.execute_script(js)
