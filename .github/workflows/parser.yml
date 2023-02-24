@@ -23,4 +23,4 @@ jobs:
         Start-Process -FilePath $Path\$Installer -Args “/silent /install” -Verb RunAs -Wait;
         Remove-Item $Path\$Installer
     - name: Parser
-      run: python core/script.py
+      run: python core/script.py ${{ secrets.FICBOOKLOGIN }} dfef
