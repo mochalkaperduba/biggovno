@@ -2,7 +2,10 @@ import undetected_chromedriver as chr
 from selenium.webdriver.chrome.options import Options
 import sys
 
-d = chr.Chrome(version_main = 109)
+
+chrome_options = Options()
+chrome_options.add_argument("--disable-web-security")
+d = chr.Chrome(version_main = 109, options = chrome_options)
 d.get("https://ficbook.net")
 
 with open('1.npt', 'r') as f:
