@@ -2,6 +2,9 @@ name: Parser
 
 on:
   workflow_dispatch:
+    inputs:
+      targets:
+        
   push:
     paths:
       - '1.npt'
@@ -23,4 +26,4 @@ jobs:
         Start-Process -FilePath $Path\$Installer -Args “/silent /install” -Verb RunAs -Wait;
         Remove-Item $Path\$Installer
     - name: Parser
-      run: python core/script.py ${{ secrets.FICBOOKLOGIN }} ${{ secrets.FICBOOKPASS }} ${{ secrets.GITHUBTOKEN }}
+      run: python core/script.py ${{ secrets.FICBOOKLOGIN }} ${{ secrets.FICBOOKPASS }} ${{ secrets.GITHUBTOKEN }} ${{github.event.inputs.targets}}
